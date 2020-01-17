@@ -208,6 +208,12 @@ class ConditionalMaskedAutoregressiveFlow:
         :param input_data: tensorflow placeholder to serve as input for data-realizations part of the training data; if None, a new placeholder is created
         :param index: index of the NDE; crucial when using ensembles of NDEs to keep their scopes separate
         """
+        #set seed
+        #np.random.seed(12)
+        #tfseed = 1234
+        #tf.compat.v1.set_random_seed(tfseed)
+        #print('seed set nde')
+
 
         # save input arguments
         self.n_parameters = n_parameters

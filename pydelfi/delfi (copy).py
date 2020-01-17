@@ -21,12 +21,6 @@ class Delfi():
                  rank = 0, n_procs = 1, comm = None, red_op = None, \
                  show_plot = True, results_dir = "", progress_bar = True, input_normalization = None,
                  graph_restore_filename = "graph_checkpoint", restore_filename = "restore.pkl", restore = False, save = True):
-
-        #set seed
-        np.random.seed(12)
-      #  tfseed = 1234
-      #  tf.compat.v1.set_random_seed(tfseed)
-      #  print('seed set delfi')
         
         # Input validation
         for i in range(len(nde)):
@@ -298,10 +292,8 @@ class Delfi():
         
         # Random seed generator: set to unsigned 32 bit int random numbers as default
         if seed_generator is None:
-            #seed_generator = lambda: np.random.randint(2147483647)
-             print('delfi seed 1234')
-             seed_generator = 1234
-
+            seed_generator = lambda: np.random.randint(2147483647)
+        
         # Dimension outputs
         data_samples = np.zeros((n_batch*sub_batch, self.D))
         parameter_samples = np.zeros((n_batch*sub_batch, self.npar))
