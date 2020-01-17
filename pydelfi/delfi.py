@@ -299,7 +299,7 @@ class Delfi():
         # Random seed generator: set to unsigned 32 bit int random numbers as default
         if seed_generator is None:
             #seed_generator = lambda: np.random.randint(2147483647)
-             print('delfi seed 1234')
+             print('set delfi seed 1234')
              seed_generator = 1234
 
         # Dimension outputs
