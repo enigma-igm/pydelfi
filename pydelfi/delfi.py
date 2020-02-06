@@ -357,9 +357,9 @@ class Delfi():
         sampler.reset()
     
         # Main chain
-        sampler.run_mcmc(state.coords, main_chain)
-    
-        return sampler.flatchain
+        pos, prob, state,blobs= sampler.run_mcmc(state.coords, main_chain)
+
+        return sampler.flatchain, pos, prob, state
 
     def sequential_training(self, simulator, compressor, n_initial, n_batch, n_populations, proposal = None, \
                             simulator_args = None, compressor_args = None, safety = 5, plot = True, batch_size = 100, \
