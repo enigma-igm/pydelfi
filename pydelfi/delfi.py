@@ -350,7 +350,10 @@ class Delfi():
             x0 = [self.posterior_samples[-i,:] for i in range(self.nwalkers)]
         
         # Set up the sampler
+
         sampler = emcee.EnsembleSampler(self.nwalkers, self.npar, log_likelihood)
+
+
     
         # Burn-in chain
         state = sampler.run_mcmc(x0, burn_in_chain)
