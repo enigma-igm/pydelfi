@@ -23,7 +23,7 @@ class Delfi():
                  graph_restore_filename = "graph_checkpoint", restore_filename = "restore.pkl", restore = False, save = True):
 
         #set seed
-        np.random.seed(12)
+      #np.random.seed(12)
       #  tfseed = 1234
       #  tf.compat.v1.set_random_seed(tfseed)
       #  print('seed set delfi')
